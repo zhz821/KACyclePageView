@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'KACyclePageView_Example' do
+  pod 'KACyclePageView', :path => '../'
+
+  target 'KACyclePageView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
