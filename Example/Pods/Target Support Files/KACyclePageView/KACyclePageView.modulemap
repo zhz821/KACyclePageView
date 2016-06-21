@@ -1,0 +1,6 @@
+framework module KACyclePageView {
+  umbrella header "KACyclePageView-umbrella.h"
+
+  export *
+  module * { export * }
+}

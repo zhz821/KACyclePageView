@@ -3,10 +3,11 @@
 //  KACyclePageView
 //
 //  Created by zhihuazhang on 06/21/2016.
-//  Copyright (c) 2016 zhihuazhang. All rights reserved.
+//  Copyright © 2016年 Kapps Inc. All rights reserved.
 //
 
 import UIKit
+import KACyclePageView
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let titles = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        var viewControllers = [UIViewController]()
+
+        for _ in 0..<titles.count {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor.randomColor()
+            viewControllers.append(vc)
+        }
+        
+        let vc = KACyclePageView.cyclePageView(viewControllers, titles: titles)
+        
+        window?.rootViewController = vc
+        
         return true
     }
 
@@ -44,3 +58,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension UIColor {
+    
+    class func randomColor() -> UIColor {
+        let randomRed:CGFloat = CGFloat(drand48())
+        
+        let randomGreen:CGFloat = CGFloat(drand48())
+        
+        let randomBlue:CGFloat = CGFloat(drand48())
+        
+        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+    }
+}

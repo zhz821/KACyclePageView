@@ -1,0 +1,832 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D6E60B172A624ED656F83741B32BC83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		2B59F323B4766EE6591D421E61CE590E /* KACyclePageView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AEF826AEC1DD5CBDFFF39BFEB5F4C /* KACyclePageView-dummy.m */; };
+		4E449BF628A167136C0CE37B9AC090A5 /* KACyclePageView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F701CC5FF7F139A92FFDBB1A984D0A61 /* KACyclePageView.bundle */; };
+		596169D98667162317DB950F0F523439 /* Pods-KACyclePageView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B723829FC6E72DA4B55FDEED485C77 /* Pods-KACyclePageView_Example-dummy.m */; };
+		5D25A2A7F873A3FE80D79E07583A8B16 /* Pods-KACyclePageView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51340D86A9DE3047B26D9BF48FC1CDCF /* Pods-KACyclePageView_Tests-dummy.m */; };
+		5D6E56BB3C0E1CC7A8C02097D45206A1 /* KAPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8D90CBC3B6CE3AABBBD28CB6EAFF3E /* KAPageViewController.swift */; };
+		7041B78E6E536D284A0D6775DB61BABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		82C4676AE53B9C0F74FC06127ACA9AD0 /* KACyclePageView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820B9FCC0ED222E113A1467616FC4127 /* KACyclePageView.storyboard */; };
+		9058C941A9BC6E7634320161D4D58AD6 /* KACyclePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCD7648D4F0A1308C6840905ABF1C90 /* KACyclePageView.swift */; };
+		B8BDB240CF08FA58B60309FEB9C5C40C /* Pods-KACyclePageView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD34802159F548B0961B19B19B6866F3 /* Pods-KACyclePageView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C79F677F5A117D8332F4FCB9691F2E3F /* KACyclePageView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B8D98DC5EE113E332FCFC0A758F39F /* KACyclePageView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0E1287D0A88229678EE939634926F79 /* Pods-KACyclePageView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC043F6B8B338988FF4A05DB888923DF /* Pods-KACyclePageView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8C2BF4553232B9B57FD281ABC109051 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		221C8B0B82EB906F79F6F157548D44EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4201D474FC1D135E4BDC23AE365B41A8;
+			remoteInfo = KACyclePageView;
+		};
+		C9DF29000263CBCF0614FB39C01EF242 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A581C50500F49547B45EE1DD3310A5D2;
+			remoteInfo = "KACyclePageView-KACyclePageView";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		056786AB1D5248CEB9138FA50D39B5DC /* KACyclePageView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KACyclePageView-prefix.pch"; sourceTree = "<group>"; };
+		1143D42F93C144360BB04CE6DFE99B50 /* Pods-KACyclePageView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KACyclePageView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		22EFF4BCD7CDACDEC165961C99BBCD40 /* KACyclePageView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KACyclePageView.modulemap; sourceTree = "<group>"; };
+		23107F9AECCF1995EF9B2EE578A62D26 /* Pods-KACyclePageView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KACyclePageView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		25F4889C7FD8A266FBC83FC62C839FA6 /* Pods-KACyclePageView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KACyclePageView_Tests.modulemap"; sourceTree = "<group>"; };
+		38B8D98DC5EE113E332FCFC0A758F39F /* KACyclePageView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KACyclePageView-umbrella.h"; sourceTree = "<group>"; };
+		48CA5C26CD2F3F0062829CF5796CAD12 /* Pods-KACyclePageView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KACyclePageView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4BED184AD300A8CD571172C78C9CD150 /* Pods-KACyclePageView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KACyclePageView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		51340D86A9DE3047B26D9BF48FC1CDCF /* Pods-KACyclePageView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KACyclePageView_Tests-dummy.m"; sourceTree = "<group>"; };
+		708905603988A3366083DB9A8DFF3D00 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		738CF7834D1E4C6C5B46DCE9D3919F64 /* Pods-KACyclePageView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KACyclePageView_Example.modulemap"; sourceTree = "<group>"; };
+		76B723829FC6E72DA4B55FDEED485C77 /* Pods-KACyclePageView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KACyclePageView_Example-dummy.m"; sourceTree = "<group>"; };
+		7E54811450AA4132043EF16D89C78D6F /* Pods-KACyclePageView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KACyclePageView_Example-frameworks.sh"; sourceTree = "<group>"; };
+		7FCD7648D4F0A1308C6840905ABF1C90 /* KACyclePageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KACyclePageView.swift; sourceTree = "<group>"; };
+		80FF1D7851914BEF73EE2AE94724D265 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		820B9FCC0ED222E113A1467616FC4127 /* KACyclePageView.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = KACyclePageView.storyboard; sourceTree = "<group>"; };
+		8229BFEE19F9B13F42384C8EFBE5754E /* Pods-KACyclePageView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KACyclePageView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8B8F434A8D3399F35E4358563393665C /* Pods_KACyclePageView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KACyclePageView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E6E82EF5452CFAD2EB9C17C1824917D /* Pods-KACyclePageView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KACyclePageView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98E0CC959E6329687309185C23E1D656 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A38AEF826AEC1DD5CBDFFF39BFEB5F4C /* KACyclePageView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KACyclePageView-dummy.m"; sourceTree = "<group>"; };
+		A5E82E596F6D65C369E223A6B7FAD1BA /* Pods-KACyclePageView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KACyclePageView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A622DD6F508AFA8F852D1A1D328AF7E2 /* ResourceBundle-KACyclePageView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-KACyclePageView-Info.plist"; sourceTree = "<group>"; };
+		AB8D90CBC3B6CE3AABBBD28CB6EAFF3E /* KAPageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KAPageViewController.swift; sourceTree = "<group>"; };
+		BA45788074A071F10345D1E72CB5BB77 /* Pods-KACyclePageView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KACyclePageView_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		BCF53F21AD7FD1F5C391812E138BF51D /* Pods-KACyclePageView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KACyclePageView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CAF6F04BED4D51B988915746695DF1A9 /* Pods_KACyclePageView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KACyclePageView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D465DA3DA49F9DD8C07631DA5C08F936 /* KACyclePageView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KACyclePageView.xcconfig; sourceTree = "<group>"; };
+		DD34802159F548B0961B19B19B6866F3 /* Pods-KACyclePageView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KACyclePageView_Tests-umbrella.h"; sourceTree = "<group>"; };
+		E3A758FC3AFD4808A5C8ACD49445CB64 /* Pods-KACyclePageView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KACyclePageView_Example-resources.sh"; sourceTree = "<group>"; };
+		F701CC5FF7F139A92FFDBB1A984D0A61 /* KACyclePageView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KACyclePageView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9EA1458931FFF525F0699C4F15696ED /* KACyclePageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KACyclePageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC043F6B8B338988FF4A05DB888923DF /* Pods-KACyclePageView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KACyclePageView_Example-umbrella.h"; sourceTree = "<group>"; };
+		FC9276FC4B04171FBA1C807F0AF9B487 /* Pods-KACyclePageView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KACyclePageView_Tests-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000043858E3C8F44DD209EED7A5B97B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8C2BF4553232B9B57FD281ABC109051 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DB1749AD957C412FFC4F96A506A315 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		241AF0C21E78A56EE3DFDE925DB2651C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7041B78E6E536D284A0D6775DB61BABA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29BAB4BEBB34591A9BCD32237D348273 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D6E60B172A624ED656F83741B32BC83 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00CCE12D5B1F44A68863455EA4D1CC66 /* KACyclePageView */ = {
+			isa = PBXGroup;
+			children = (
+				F9B65314F241D55D1BB2372BE4957A4E /* KACyclePageView */,
+				F334F8094569C7A73F489452C18931B5 /* Resources */,
+				DFC69B8447DA7077589699CF7641095E /* Support Files */,
+			);
+			name = KACyclePageView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		24C660C4FF1200A8D09C1F0B38FFC6FB /* Pods-KACyclePageView_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				80FF1D7851914BEF73EE2AE94724D265 /* Info.plist */,
+				25F4889C7FD8A266FBC83FC62C839FA6 /* Pods-KACyclePageView_Tests.modulemap */,
+				23107F9AECCF1995EF9B2EE578A62D26 /* Pods-KACyclePageView_Tests-acknowledgements.markdown */,
+				8229BFEE19F9B13F42384C8EFBE5754E /* Pods-KACyclePageView_Tests-acknowledgements.plist */,
+				51340D86A9DE3047B26D9BF48FC1CDCF /* Pods-KACyclePageView_Tests-dummy.m */,
+				BA45788074A071F10345D1E72CB5BB77 /* Pods-KACyclePageView_Tests-frameworks.sh */,
+				FC9276FC4B04171FBA1C807F0AF9B487 /* Pods-KACyclePageView_Tests-resources.sh */,
+				DD34802159F548B0961B19B19B6866F3 /* Pods-KACyclePageView_Tests-umbrella.h */,
+				4BED184AD300A8CD571172C78C9CD150 /* Pods-KACyclePageView_Tests.debug.xcconfig */,
+				48CA5C26CD2F3F0062829CF5796CAD12 /* Pods-KACyclePageView_Tests.release.xcconfig */,
+			);
+			name = "Pods-KACyclePageView_Tests";
+			path = "Target Support Files/Pods-KACyclePageView_Tests";
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5B305AD354248CDBD08C2493B8E1F382 /* KACyclePageView */ = {
+			isa = PBXGroup;
+			children = (
+				6743DB86C6BBD77AFA0E3846BDF6F0E8 /* Assets */,
+			);
+			path = KACyclePageView;
+			sourceTree = "<group>";
+		};
+		5BC6B3504B52BBC3EECAC5093B9DBBD8 /* Pods-KACyclePageView_Example */ = {
+			isa = PBXGroup;
+			children = (
+				708905603988A3366083DB9A8DFF3D00 /* Info.plist */,
+				738CF7834D1E4C6C5B46DCE9D3919F64 /* Pods-KACyclePageView_Example.modulemap */,
+				BCF53F21AD7FD1F5C391812E138BF51D /* Pods-KACyclePageView_Example-acknowledgements.markdown */,
+				8E6E82EF5452CFAD2EB9C17C1824917D /* Pods-KACyclePageView_Example-acknowledgements.plist */,
+				76B723829FC6E72DA4B55FDEED485C77 /* Pods-KACyclePageView_Example-dummy.m */,
+				7E54811450AA4132043EF16D89C78D6F /* Pods-KACyclePageView_Example-frameworks.sh */,
+				E3A758FC3AFD4808A5C8ACD49445CB64 /* Pods-KACyclePageView_Example-resources.sh */,
+				FC043F6B8B338988FF4A05DB888923DF /* Pods-KACyclePageView_Example-umbrella.h */,
+				1143D42F93C144360BB04CE6DFE99B50 /* Pods-KACyclePageView_Example.debug.xcconfig */,
+				A5E82E596F6D65C369E223A6B7FAD1BA /* Pods-KACyclePageView_Example.release.xcconfig */,
+			);
+			name = "Pods-KACyclePageView_Example";
+			path = "Target Support Files/Pods-KACyclePageView_Example";
+			sourceTree = "<group>";
+		};
+		6743DB86C6BBD77AFA0E3846BDF6F0E8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				820B9FCC0ED222E113A1467616FC4127 /* KACyclePageView.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		760B594E8B24B83ADB00ACD73A5B6FAE /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00CCE12D5B1F44A68863455EA4D1CC66 /* KACyclePageView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				760B594E8B24B83ADB00ACD73A5B6FAE /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				A221E5EBE69A675AE4C4CFBA7F2F8C9A /* Products */,
+				82C2DA30B23D8908DD339A9742B31B43 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		82C2DA30B23D8908DD339A9742B31B43 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BC6B3504B52BBC3EECAC5093B9DBBD8 /* Pods-KACyclePageView_Example */,
+				24C660C4FF1200A8D09C1F0B38FFC6FB /* Pods-KACyclePageView_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		97AF80CCD2EB256D3AEB554C46B75EC8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7FCD7648D4F0A1308C6840905ABF1C90 /* KACyclePageView.swift */,
+				AB8D90CBC3B6CE3AABBBD28CB6EAFF3E /* KAPageViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A221E5EBE69A675AE4C4CFBA7F2F8C9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F701CC5FF7F139A92FFDBB1A984D0A61 /* KACyclePageView.bundle */,
+				F9EA1458931FFF525F0699C4F15696ED /* KACyclePageView.framework */,
+				CAF6F04BED4D51B988915746695DF1A9 /* Pods_KACyclePageView_Example.framework */,
+				8B8F434A8D3399F35E4358563393665C /* Pods_KACyclePageView_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFC69B8447DA7077589699CF7641095E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				98E0CC959E6329687309185C23E1D656 /* Info.plist */,
+				22EFF4BCD7CDACDEC165961C99BBCD40 /* KACyclePageView.modulemap */,
+				D465DA3DA49F9DD8C07631DA5C08F936 /* KACyclePageView.xcconfig */,
+				A38AEF826AEC1DD5CBDFFF39BFEB5F4C /* KACyclePageView-dummy.m */,
+				056786AB1D5248CEB9138FA50D39B5DC /* KACyclePageView-prefix.pch */,
+				38B8D98DC5EE113E332FCFC0A758F39F /* KACyclePageView-umbrella.h */,
+				A622DD6F508AFA8F852D1A1D328AF7E2 /* ResourceBundle-KACyclePageView-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/KACyclePageView";
+			sourceTree = "<group>";
+		};
+		F334F8094569C7A73F489452C18931B5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5B305AD354248CDBD08C2493B8E1F382 /* KACyclePageView */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F9B65314F241D55D1BB2372BE4957A4E /* KACyclePageView */ = {
+			isa = PBXGroup;
+			children = (
+				97AF80CCD2EB256D3AEB554C46B75EC8 /* Classes */,
+			);
+			path = KACyclePageView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		151E9AB0E9D9937AEDBADDDADBEBF382 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C79F677F5A117D8332F4FCB9691F2E3F /* KACyclePageView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8488F7BE043BA6AA12E807DB93979E55 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0E1287D0A88229678EE939634926F79 /* Pods-KACyclePageView_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDA031CB99401893574307E16BAD89E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8BDB240CF08FA58B60309FEB9C5C40C /* Pods-KACyclePageView_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		345CE2DF00F8C00D4A9A9FEFA534F3A5 /* Pods-KACyclePageView_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96B58388CE516289F04BF98FE831F1DE /* Build configuration list for PBXNativeTarget "Pods-KACyclePageView_Example" */;
+			buildPhases = (
+				D4FED0B3438EBC52B166E128A3705920 /* Sources */,
+				29BAB4BEBB34591A9BCD32237D348273 /* Frameworks */,
+				8488F7BE043BA6AA12E807DB93979E55 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEE77D3F254C89038AB051855A02E9FE /* PBXTargetDependency */,
+			);
+			name = "Pods-KACyclePageView_Example";
+			productName = "Pods-KACyclePageView_Example";
+			productReference = CAF6F04BED4D51B988915746695DF1A9 /* Pods_KACyclePageView_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4201D474FC1D135E4BDC23AE365B41A8 /* KACyclePageView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64E2328AA2470C8002F9C0224B876433 /* Build configuration list for PBXNativeTarget "KACyclePageView" */;
+			buildPhases = (
+				903385F8BBC8A4DEB600CA5A0263F7E3 /* Sources */,
+				000043858E3C8F44DD209EED7A5B97B9 /* Frameworks */,
+				337A1ED7307C4D7E4837AD8DD60124AF /* Resources */,
+				151E9AB0E9D9937AEDBADDDADBEBF382 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87C75B534AC5081DF1B45282ED63C84D /* PBXTargetDependency */,
+			);
+			name = KACyclePageView;
+			productName = KACyclePageView;
+			productReference = F9EA1458931FFF525F0699C4F15696ED /* KACyclePageView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9D91067F33FA36E9F1A271429398EB8E /* Pods-KACyclePageView_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E3A722EF84A21D96F6C38BCFBC9E809 /* Build configuration list for PBXNativeTarget "Pods-KACyclePageView_Tests" */;
+			buildPhases = (
+				B719619F38377A32620A9D15AABC1918 /* Sources */,
+				241AF0C21E78A56EE3DFDE925DB2651C /* Frameworks */,
+				EDA031CB99401893574307E16BAD89E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-KACyclePageView_Tests";
+			productName = "Pods-KACyclePageView_Tests";
+			productReference = 8B8F434A8D3399F35E4358563393665C /* Pods_KACyclePageView_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A581C50500F49547B45EE1DD3310A5D2 /* KACyclePageView-KACyclePageView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E05770C96C7A16319D558788D74AA67 /* Build configuration list for PBXNativeTarget "KACyclePageView-KACyclePageView" */;
+			buildPhases = (
+				23FA8934E6ADE47EB8DCA3B52E752A57 /* Sources */,
+				04DB1749AD957C412FFC4F96A506A315 /* Frameworks */,
+				EA7235D3AB65AA397276509A5B3151E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KACyclePageView-KACyclePageView";
+			productName = "KACyclePageView-KACyclePageView";
+			productReference = F701CC5FF7F139A92FFDBB1A984D0A61 /* KACyclePageView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = A221E5EBE69A675AE4C4CFBA7F2F8C9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4201D474FC1D135E4BDC23AE365B41A8 /* KACyclePageView */,
+				A581C50500F49547B45EE1DD3310A5D2 /* KACyclePageView-KACyclePageView */,
+				345CE2DF00F8C00D4A9A9FEFA534F3A5 /* Pods-KACyclePageView_Example */,
+				9D91067F33FA36E9F1A271429398EB8E /* Pods-KACyclePageView_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		337A1ED7307C4D7E4837AD8DD60124AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E449BF628A167136C0CE37B9AC090A5 /* KACyclePageView.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA7235D3AB65AA397276509A5B3151E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82C4676AE53B9C0F74FC06127ACA9AD0 /* KACyclePageView.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23FA8934E6ADE47EB8DCA3B52E752A57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		903385F8BBC8A4DEB600CA5A0263F7E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B59F323B4766EE6591D421E61CE590E /* KACyclePageView-dummy.m in Sources */,
+				9058C941A9BC6E7634320161D4D58AD6 /* KACyclePageView.swift in Sources */,
+				5D6E56BB3C0E1CC7A8C02097D45206A1 /* KAPageViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B719619F38377A32620A9D15AABC1918 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D25A2A7F873A3FE80D79E07583A8B16 /* Pods-KACyclePageView_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4FED0B3438EBC52B166E128A3705920 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				596169D98667162317DB950F0F523439 /* Pods-KACyclePageView_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87C75B534AC5081DF1B45282ED63C84D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "KACyclePageView-KACyclePageView";
+			target = A581C50500F49547B45EE1DD3310A5D2 /* KACyclePageView-KACyclePageView */;
+			targetProxy = C9DF29000263CBCF0614FB39C01EF242 /* PBXContainerItemProxy */;
+		};
+		CEE77D3F254C89038AB051855A02E9FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KACyclePageView;
+			target = 4201D474FC1D135E4BDC23AE365B41A8 /* KACyclePageView */;
+			targetProxy = 221C8B0B82EB906F79F6F157548D44EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1420FD337969351F879265560E1320ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1143D42F93C144360BB04CE6DFE99B50 /* Pods-KACyclePageView_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KACyclePageView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KACyclePageView_Example/Pods-KACyclePageView_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_KACyclePageView_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		19C3B44CD09A7853EA8004468C49CD26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D465DA3DA49F9DD8C07631DA5C08F936 /* KACyclePageView.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/KACyclePageView";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/KACyclePageView/ResourceBundle-KACyclePageView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = KACyclePageView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		3DF2CACC19280F8AFD9B15B34D30343C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BED184AD300A8CD571172C78C9CD150 /* Pods-KACyclePageView_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KACyclePageView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KACyclePageView_Tests/Pods-KACyclePageView_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_KACyclePageView_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		64A14D18F7787F3B1991B0F2086EC72B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D465DA3DA49F9DD8C07631DA5C08F936 /* KACyclePageView.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/KACyclePageView";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/KACyclePageView/ResourceBundle-KACyclePageView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = KACyclePageView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		715AB2147B66270A28778A61D2CCC201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D465DA3DA49F9DD8C07631DA5C08F936 /* KACyclePageView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KACyclePageView/KACyclePageView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KACyclePageView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KACyclePageView/KACyclePageView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KACyclePageView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8F387A354E40393798094CDD175611BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D465DA3DA49F9DD8C07631DA5C08F936 /* KACyclePageView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KACyclePageView/KACyclePageView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KACyclePageView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KACyclePageView/KACyclePageView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KACyclePageView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9347D2D45686E84E02BFC59598D220BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5E82E596F6D65C369E223A6B7FAD1BA /* Pods-KACyclePageView_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KACyclePageView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KACyclePageView_Example/Pods-KACyclePageView_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_KACyclePageView_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E0FEB161E3D4D13B845DEA217F06D851 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48CA5C26CD2F3F0062829CF5796CAD12 /* Pods-KACyclePageView_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KACyclePageView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KACyclePageView_Tests/Pods-KACyclePageView_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_KACyclePageView_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
+				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E05770C96C7A16319D558788D74AA67 /* Build configuration list for PBXNativeTarget "KACyclePageView-KACyclePageView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64A14D18F7787F3B1991B0F2086EC72B /* Debug */,
+				19C3B44CD09A7853EA8004468C49CD26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64E2328AA2470C8002F9C0224B876433 /* Build configuration list for PBXNativeTarget "KACyclePageView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F387A354E40393798094CDD175611BB /* Debug */,
+				715AB2147B66270A28778A61D2CCC201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96B58388CE516289F04BF98FE831F1DE /* Build configuration list for PBXNativeTarget "Pods-KACyclePageView_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1420FD337969351F879265560E1320ED /* Debug */,
+				9347D2D45686E84E02BFC59598D220BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E3A722EF84A21D96F6C38BCFBC9E809 /* Build configuration list for PBXNativeTarget "Pods-KACyclePageView_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DF2CACC19280F8AFD9B15B34D30343C /* Debug */,
+				E0FEB161E3D4D13B845DEA217F06D851 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

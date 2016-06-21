@@ -1,0 +1,16 @@
+PODS:
+  - KACyclePageView (0.1.0)
+
+DEPENDENCIES:
+  - KACyclePageView (from `../`)
+
+EXTERNAL SOURCES:
+  KACyclePageView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  KACyclePageView: 46291cdc761db734677bf0ef81c3098af3f6a46a
+
+PODFILE CHECKSUM: db0244976185473114e29a3a7e3b8d83ac083bfd
+
+COCOAPODS: 1.0.1

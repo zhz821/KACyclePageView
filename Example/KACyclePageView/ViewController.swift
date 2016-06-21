@@ -3,7 +3,7 @@
 //  KACyclePageView
 //
 //  Created by zhihuazhang on 06/21/2016.
-//  Copyright (c) 2016 zhihuazhang. All rights reserved.
+//  Copyright © 2016年 Kapps Inc. All rights reserved.
 //
 
 import UIKit
