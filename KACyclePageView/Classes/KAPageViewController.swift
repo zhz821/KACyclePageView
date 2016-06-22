@@ -35,7 +35,9 @@ class KAPageViewController: UIPageViewController {
         guard let firstVC = pageDataSource?.viewControllerForPageAtIndex(currentIndex) else {
             return
         }
-        
+
+        firstVC.kaPageIndex = index
+
         setViewControllers([firstVC], direction: .Forward, animated: false, completion: nil)
     }
 
@@ -109,7 +111,7 @@ extension KAPageViewController: UIPageViewControllerDataSource, UIPageViewContro
 
 }
 
-private var kaPageIndexAssociationKey: UInt8 = 0
+private var kaPageIndexAssociationKey = 0
 
 public extension UIViewController {
     
