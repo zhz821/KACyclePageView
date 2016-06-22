@@ -1,6 +1,6 @@
 # KACyclePageView
 
-KACyclePageView is a Container View Controller supports showing UIPageViewController's contents cycling. Pan gesture can be used to move on to next or previous view controller. It shows a interactive indicator of the current, previous, next child view controllers.
+KACyclePageView is a Container View Controller supports showing UIPageViewController's contents circulated. Pan gesture can be used to move on to next or previous view controller. It shows a interactive indicator of the current, previous, next child view controllers.
 
 ## Features
 

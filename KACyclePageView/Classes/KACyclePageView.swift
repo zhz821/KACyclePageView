@@ -8,18 +8,21 @@
 
 import UIKit
 
+public protocol KACyclePageViewDataSource {
+    
+    func numberOfPages() -> Int
+    func viewControllerForPageAtIndex(index: Int) -> UIViewController
+    func titleForPageAtIndex(index: Int) -> String
+    
+}
+
 public class KACyclePageView: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-
-    private var pageViewControllers = [UIViewController]()
-    private var titles = [String]()
     
     private var pageViewController: KAPageViewController!
     
-    private struct UX {
-        static let CellCount = 4
-    }
+    private let MinCycleCellCount = 4
     
     private var cellWidth: CGFloat {
         return view.frame.width / CGFloat(visibleCellCount)
@@ -29,33 +32,38 @@ public class KACyclePageView: UIViewController {
     
     private var currentIndex: Int = 0
 
-    //TODO: change this
+    private var pageCount = 0
+    
     private var shouldCycle: Bool {
         get {
-            return titles.count > 4
+            return pageCount > MinCycleCellCount
         }
     }
     
     private var scrollPostition: UICollectionViewScrollPosition {
         get {
-            return titles.count > 4 ? .CenteredHorizontally : .None
+            return pageCount > MinCycleCellCount ? .CenteredHorizontally : .None
         }
     }
     
     private var visibleCellCount: Int {
         get {
-            return min(UX.CellCount, titles.count)
+            return min(MinCycleCellCount, pageCount)
         }
     }
     
-    public class func cyclePageView(viewControllers: [UIViewController], titles: [String]) -> KACyclePageView {
+    var dataSource: KACyclePageViewDataSource?
+    
+    public class func cyclePageView(dataSource dataSource: AnyObject) -> KACyclePageView {
         let podBundle = NSBundle(forClass: self.classForCoder())
         let bundleURL = podBundle.URLForResource("KACyclePageView", withExtension: "bundle")!
         let bundle = NSBundle(URL: bundleURL)
         let storyboard = UIStoryboard(name: "KACyclePageView", bundle: bundle)
         let vc = storyboard.instantiateInitialViewController() as! KACyclePageView
-        vc.pageViewControllers = viewControllers
-        vc.titles = titles
+
+        vc.dataSource = dataSource as? KACyclePageViewDataSource
+        
+        vc.pageCount = vc.dataSource!.numberOfPages()
         
         return vc
     }
@@ -63,7 +71,7 @@ public class KACyclePageView: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-        currentIndex = shouldCycle ? titles.count : 0
+        currentIndex = shouldCycle ? pageCount : 0
     }
 
     override public func viewDidAppear(animated: Bool) {
@@ -82,17 +90,18 @@ public class KACyclePageView: UIViewController {
         if segue.identifier == "SeguePageView" {
             pageViewController = segue.destinationViewController as! KAPageViewController
             pageViewController.pageDelegate = self
-            pageViewController.pageViewControllers = pageViewControllers
+            pageViewController.pageCount = pageCount
+            pageViewController.pageDataSource = dataSource
         }
     }
     
     
     private func updateCurrentIndex(index: Int) {
         if shouldCycle {
-            currentIndex = index + titles.count
+            currentIndex = index + pageCount
             
-            if currentIndex + visibleCellCount / 2 >= (2 * titles.count - 1) {
-                currentIndex -= titles.count
+            if currentIndex + visibleCellCount / 2 >= (2 * pageCount - 1) {
+                currentIndex -= pageCount
             }
             
             let indexPath = NSIndexPath(forItem: currentIndex, inSection: 0)
@@ -157,12 +166,12 @@ public class KACyclePageView: UIViewController {
         if offsetX < 0 && offsetX < -view.frame.width / 2 {
             showIndex -= 1
         }
-        if showIndex >= titles.count {
+        if showIndex >= pageCount {
             showIndex = 0
         }
         
         if showIndex < 0 {
-            showIndex = titles.count - 1
+            showIndex = pageCount - 1
         }
         
         return collectionView.indexPathForCell(cell)?.item == showIndex
@@ -178,15 +187,15 @@ extension KACyclePageView: UICollectionViewDataSource, UICollectionViewDelegate,
     }
     
     public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return shouldCycle ? titles.count * 2 : titles.count
+        return shouldCycle ? pageCount * 2 : pageCount
     }
     
     public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("TitleCell", forIndexPath: indexPath) as! TitleCell
         
-        let cycledIndex = indexPath.item % titles.count
+        let cycledIndex = indexPath.item % pageCount
         
-        let title = titles[cycledIndex]
+        let title = dataSource?.titleForPageAtIndex(cycledIndex)
         
         cell.titleLabel.text = title
         

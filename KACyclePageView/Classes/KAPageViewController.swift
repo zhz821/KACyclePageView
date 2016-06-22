@@ -17,18 +17,12 @@ protocol KAPageViewControllerDelegate {
 
 class KAPageViewController: UIPageViewController {
 
-    var pageViewControllers = [UIViewController]()
+    var pageCount = 0
     
-    private var beforeIndex: Int = 0
-    
-    private var currentIndex: Int? {
-        guard let viewController = viewControllers?.first else {
-            return nil
-        }
-        return pageViewControllers.indexOf(viewController)
-    }    
+    private var currentIndex = 0
     
     var pageDelegate: KAPageViewControllerDelegate?
+    var pageDataSource: KACyclePageViewDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +31,12 @@ class KAPageViewController: UIPageViewController {
         delegate = self
         
         setupScrollView()
-        setViewControllers([pageViewControllers[0]], direction: .Forward, animated: false, completion: nil)
         
+        guard let firstVC = pageDataSource?.viewControllerForPageAtIndex(currentIndex) else {
+            return
+        }
         
+        setViewControllers([firstVC], direction: .Forward, animated: false, completion: nil)
     }
 
     private func setupScrollView() {
@@ -51,24 +48,25 @@ class KAPageViewController: UIPageViewController {
     // MARK: - Support
     
     private func nextViewController(current: UIViewController, isAfter: Bool) -> UIViewController? {
-        if pageViewControllers.count < 2 {
+        if pageCount < 2 {
             return nil
         }
         
-        guard var index = pageViewControllers.indexOf(current) else {
-            return nil
-        }
+        var index = currentIndex
         
         index = isAfter ? index + 1 : index - 1
         
         if index < 0 {
-            index = pageViewControllers.count - 1
-        } else if index == pageViewControllers.count {
+            index = pageCount - 1
+        } else if index == pageCount {
             index = 0
         }
         
-        if index >= 0 && index < pageViewControllers.count {
-            return pageViewControllers[index]
+        if index >= 0 && index < pageCount {
+            let vc = pageDataSource?.viewControllerForPageAtIndex(index)
+            vc?.kaPageIndex = index
+            
+            return vc
         }
         return nil
     }
@@ -87,18 +85,18 @@ extension KAPageViewController: UIScrollViewDelegate {
     
 }
 
-
 // MARK: - UIPageViewController
 
 extension KAPageViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        if let currentIndex = currentIndex where currentIndex < pageViewControllers.count {
-            
-            pageDelegate?.didChangeToIndex(currentIndex)
-            
-            beforeIndex = currentIndex
+        guard let index = viewControllers?.first?.kaPageIndex else {
+            return
         }
+        
+        currentIndex = index
+        
+        pageDelegate?.didChangeToIndex(index)
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
@@ -109,4 +107,20 @@ extension KAPageViewController: UIPageViewControllerDataSource, UIPageViewContro
         return nextViewController(viewController, isAfter: false)
     }
 
+}
+
+private var kaPageIndexAssociationKey: UInt8 = 0
+
+public extension UIViewController {
+    
+    var kaPageIndex: Int {
+        get {
+            return objc_getAssociatedObject(self, &kaPageIndexAssociationKey) as! Int
+        }
+        
+        set(newValue) {
+            objc_setAssociatedObject(self, &kaPageIndexAssociationKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+        }
+    }
+    
 }

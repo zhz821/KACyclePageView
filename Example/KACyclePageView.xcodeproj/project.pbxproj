@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2957F0EE1D1A59C900E80647 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2957F0ED1D1A59C900E80647 /* DataSource.swift */; };
 		418402FA619E6AA8E0A9FDBC /* Pods_KACyclePageView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 067E8AF84A7E337C5F352E6B /* Pods_KACyclePageView_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 		00388ADFBA0CFAEC6F24ECDD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		067E8AF84A7E337C5F352E6B /* Pods_KACyclePageView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KACyclePageView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B79060F71F7ED98D5E5DE0F /* Pods_KACyclePageView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KACyclePageView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2957F0ED1D1A59C900E80647 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		4DE1CBA7365C6623EA74FE9C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		4FA2C2068BEB418C33BB6425 /* Pods-KACyclePageView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KACyclePageView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-KACyclePageView_Example/Pods-KACyclePageView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5A9CDADBE7AF35A25FEC73D4 /* KACyclePageView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KACyclePageView.podspec; path = ../KACyclePageView.podspec; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				2957F0ED1D1A59C900E80647 /* DataSource.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -359,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2957F0EE1D1A59C900E80647 /* DataSource.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
