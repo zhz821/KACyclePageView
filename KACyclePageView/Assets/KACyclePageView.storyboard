@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Cycle Page View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="KACyclePageView" customModule="HeaderView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="KACyclePageView" customModule="KACyclePageView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -30,7 +31,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TitleCell" id="0G8-3g-KL0" customClass="TitleCell" customModule="HeaderView" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TitleCell" id="0G8-3g-KL0" customClass="TitleCell" customModule="KACyclePageView" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -38,13 +39,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYr-Eh-GlB">
-                                                    <rect key="frame" x="0.0" y="13" width="44" height="18"/>
+                                                    <rect key="frame" x="3.5" y="13" width="37.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIU-Fq-7LD">
-                                                    <rect key="frame" x="0.0" y="42" width="44" height="2"/>
+                                                    <rect key="frame" x="-6" y="42" width="56.5" height="2"/>
                                                     <color key="backgroundColor" red="1" green="0.63921568630000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="2" id="bHd-QJ-yC9"/>
@@ -54,13 +55,11 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="TYr-Eh-GlB" secondAttribute="trailing" id="2QE-Hm-WXh"/>
                                             <constraint firstAttribute="bottom" secondItem="fIU-Fq-7LD" secondAttribute="bottom" id="DBi-qJ-eAZ"/>
-                                            <constraint firstItem="TYr-Eh-GlB" firstAttribute="centerY" secondItem="0G8-3g-KL0" secondAttribute="centerY" id="M1Q-OM-i7I"/>
-                                            <constraint firstItem="fIU-Fq-7LD" firstAttribute="width" secondItem="TYr-Eh-GlB" secondAttribute="width" id="QxJ-TA-9Dj"/>
-                                            <constraint firstItem="fIU-Fq-7LD" firstAttribute="trailing" secondItem="TYr-Eh-GlB" secondAttribute="trailing" id="XL4-pA-Bvx"/>
-                                            <constraint firstItem="TYr-Eh-GlB" firstAttribute="leading" secondItem="0G8-3g-KL0" secondAttribute="leading" id="bdw-xR-a1b"/>
-                                            <constraint firstItem="fIU-Fq-7LD" firstAttribute="leading" secondItem="TYr-Eh-GlB" secondAttribute="leading" id="w3c-42-E4m"/>
+                                            <constraint firstItem="fIU-Fq-7LD" firstAttribute="width" secondItem="TYr-Eh-GlB" secondAttribute="width" multiplier="1.5" id="QxJ-TA-9Dj"/>
+                                            <constraint firstItem="fIU-Fq-7LD" firstAttribute="centerX" secondItem="0G8-3g-KL0" secondAttribute="centerX" id="dhx-qg-h8V"/>
+                                            <constraint firstItem="TYr-Eh-GlB" firstAttribute="centerY" secondItem="0G8-3g-KL0" secondAttribute="centerY" id="lHZ-fZ-phV"/>
+                                            <constraint firstItem="TYr-Eh-GlB" firstAttribute="centerX" secondItem="0G8-3g-KL0" secondAttribute="centerX" id="mdb-da-Kmk"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="bottomView" destination="fIU-Fq-7LD" id="9QT-DQ-0VM"/>
@@ -102,7 +101,7 @@
         <!--Page View Controller-->
         <scene sceneID="qak-l5-QSl">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="cDd-OE-0vq" customClass="KAPageViewController" customModule="HeaderView" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="cDd-OE-0vq" customClass="KAPageViewController" customModule="KACyclePageView" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Pp-TN-yY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="351" y="-292"/>

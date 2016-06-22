@@ -22,13 +22,32 @@ public class KACyclePageView: UIViewController {
     }
     
     private var cellWidth: CGFloat {
-        return view.frame.width / CGFloat(UX.CellCount)
+        return view.frame.width / CGFloat(visibleCellCount)
     }
     
     private var collectionViewContentOffsetX: CGFloat = 0.0
     
     private var currentIndex: Int = 0
 
+    //TODO: change this
+    private var shouldCycle: Bool {
+        get {
+            return titles.count > 4
+        }
+    }
+    
+    private var scrollPostition: UICollectionViewScrollPosition {
+        get {
+            return titles.count > 4 ? .CenteredHorizontally : .None
+        }
+    }
+    
+    private var visibleCellCount: Int {
+        get {
+            return min(UX.CellCount, titles.count)
+        }
+    }
+    
     public class func cyclePageView(viewControllers: [UIViewController], titles: [String]) -> KACyclePageView {
         let podBundle = NSBundle(forClass: self.classForCoder())
         let bundleURL = podBundle.URLForResource("KACyclePageView", withExtension: "bundle")!
@@ -44,7 +63,7 @@ public class KACyclePageView: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-        currentIndex = titles.count
+        currentIndex = shouldCycle ? titles.count : 0
     }
 
     override public func viewDidAppear(animated: Bool) {
@@ -52,7 +71,7 @@ public class KACyclePageView: UIViewController {
         
         let indexPath = NSIndexPath(forItem: currentIndex, inSection: 0)
         
-        collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: .CenteredHorizontally, animated: false)
+        collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: scrollPostition, animated: false)
         
         updateIndicatorView()
     }
@@ -69,17 +88,21 @@ public class KACyclePageView: UIViewController {
     
     
     private func updateCurrentIndex(index: Int) {
-        currentIndex = index + titles.count
-        
-        if currentIndex + UX.CellCount / 2 >= (2 * titles.count - 1) {
-            currentIndex -= titles.count
+        if shouldCycle {
+            currentIndex = index + titles.count
+            
+            if currentIndex + visibleCellCount / 2 >= (2 * titles.count - 1) {
+                currentIndex -= titles.count
+            }
+            
+            let indexPath = NSIndexPath(forItem: currentIndex, inSection: 0)
+            
+            collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: scrollPostition, animated: false)
+            
+            collectionViewContentOffsetX = 0.0
+        } else {
+            currentIndex = index
         }
-        
-        let indexPath = NSIndexPath(forItem: currentIndex, inSection: 0)
-        
-        collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: .CenteredHorizontally, animated: false)
-        
-        collectionViewContentOffsetX = 0.0
     }
 
     private func scrollWithContentOffsetX(contentOffsetX: CGFloat) {
@@ -106,36 +129,56 @@ public class KACyclePageView: UIViewController {
         updateIndicatorView()
     }
     
-    private func updateIndicatorView() {
+    private func updateIndicatorView(offsetX: CGFloat = 0) {
         let cells = collectionView.visibleCells() as! [TitleCell]
         for cell in cells {
-            cell.bottomView.hidden = !showBottomView(cell)
+            cell.bottomView.hidden = !showBottomView(cell, offsetX: offsetX)
         }
     }
     
-    private func showBottomView(cell: TitleCell) -> Bool {
-        let minX = collectionView.bounds.origin.x + cell.frame.width
-        let maxX = collectionView.bounds.origin.x + 2*cell.frame.width
-        
-        if cell.frame.origin.x > minX && cell.frame.origin.x < maxX {
-            //            centerCell = cell
-            return true
+    private func showBottomView(cell: TitleCell, offsetX: CGFloat = 0) -> Bool {
+        if shouldCycle {
+            let minX = collectionView.bounds.origin.x + cell.frame.width
+            let maxX = collectionView.bounds.origin.x + 2*cell.frame.width
+            
+            if cell.frame.origin.x > minX && cell.frame.origin.x < maxX {
+                return true
+            }
+            
+            return false
         }
         
-        return false
+        var showIndex = currentIndex
+        
+        if offsetX > view.frame.width / 2 {
+            showIndex += 1
+        }
+        
+        if offsetX < 0 && offsetX < -view.frame.width / 2 {
+            showIndex -= 1
+        }
+        if showIndex >= titles.count {
+            showIndex = 0
+        }
+        
+        if showIndex < 0 {
+            showIndex = titles.count - 1
+        }
+        
+        return collectionView.indexPathForCell(cell)?.item == showIndex
     }
 }
 
 extension KACyclePageView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let width = collectionView.frame.width / CGFloat(UX.CellCount)
+        let width = cellWidth
         
         return CGSizeMake(width, collectionView.frame.height)
     }
     
     public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return titles.count * 2
+        return shouldCycle ? titles.count * 2 : titles.count
     }
     
     public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -160,7 +203,11 @@ extension KACyclePageView: KAPageViewControllerDelegate {
     }
     
     func didScrolledWithContentOffsetX(x: CGFloat) {
-        scrollWithContentOffsetX(x)
+        if shouldCycle {
+            scrollWithContentOffsetX(x)
+        } else {
+            updateIndicatorView(x)
+        }
     }
 }
 

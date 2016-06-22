@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let titles = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        let titles = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
         var viewControllers = [UIViewController]()
 
         for _ in 0..<titles.count {

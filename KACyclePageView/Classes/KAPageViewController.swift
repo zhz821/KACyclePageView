@@ -38,6 +38,8 @@ class KAPageViewController: UIPageViewController {
         
         setupScrollView()
         setViewControllers([pageViewControllers[0]], direction: .Forward, animated: false, completion: nil)
+        
+        
     }
 
     private func setupScrollView() {
@@ -49,6 +51,10 @@ class KAPageViewController: UIPageViewController {
     // MARK: - Support
     
     private func nextViewController(current: UIViewController, isAfter: Bool) -> UIViewController? {
+        if pageViewControllers.count < 2 {
+            return nil
+        }
+        
         guard var index = pageViewControllers.indexOf(current) else {
             return nil
         }
