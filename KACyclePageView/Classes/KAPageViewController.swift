@@ -36,7 +36,7 @@ class KAPageViewController: UIPageViewController {
             return
         }
 
-        firstVC.kaPageIndex = index
+        firstVC.kaPageIndex = currentIndex
 
         setViewControllers([firstVC], direction: .Forward, animated: false, completion: nil)
     }
