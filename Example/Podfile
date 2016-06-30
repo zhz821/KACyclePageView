@@ -8,4 +8,7 @@ target 'KACyclePageView_Example' do
 
     
   end
+  
+  pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+  pod 'XCGLogger'
 end

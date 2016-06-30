@@ -1,16 +1,22 @@
 PODS:
-  - KACyclePageView (0.1.0)
+  - KACyclePageView (0.1.3)
+  - Reveal-iOS-SDK (1.6.2)
+  - XCGLogger (3.3)
 
 DEPENDENCIES:
   - KACyclePageView (from `../`)
+  - Reveal-iOS-SDK
+  - XCGLogger
 
 EXTERNAL SOURCES:
   KACyclePageView:
     :path: ../
 
 SPEC CHECKSUMS:
-  KACyclePageView: 46291cdc761db734677bf0ef81c3098af3f6a46a
+  KACyclePageView: 84b838d8445548bce43a2319458ecbdca5ea2539
+  Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
+  XCGLogger: d6e196e78940ff6daab17d6917107876f973fa31
 
-PODFILE CHECKSUM: db0244976185473114e29a3a7e3b8d83ac083bfd
+PODFILE CHECKSUM: c113bdbaaf267468b686e4586930de49a8828560
 
 COCOAPODS: 1.0.1
