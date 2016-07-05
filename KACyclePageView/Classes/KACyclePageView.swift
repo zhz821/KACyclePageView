@@ -342,14 +342,24 @@ extension KACyclePageView: UICollectionViewDataSource, UICollectionViewDelegate,
 extension KACyclePageView: KAPageViewControllerDelegate {
     
     func WillBeginDragging() {
-        if needScrollToCenter {
-            bottomBarViewCenterH.active = true
+        collectionView.scrollEnabled = false
+        
+        if !bottomBarViewCenterH.active {
             bottomBarViewLeft.active = false
-            
+            bottomBarViewCenterH.active = true
+        }
+        
+        if needScrollToCenter {
             scrollToPageIndex()
             
             needScrollToCenter = false
         }
+    }
+    
+    func didEndDragging() {
+        print(#function)
+        
+        collectionView.scrollEnabled = true
     }
     
     func didChangeToIndex(index: Int) {

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KACyclePageView'
-  s.version          = '0.1.4'
+  s.version          = '1.0.1'
   s.summary          = 'Cycled UIPageViewController with an UICollectionView header.'
 
 # This description is used to generate tags and improve search results.

@@ -11,6 +11,7 @@ import UIKit
 protocol KAPageViewControllerDelegate {
 
     func WillBeginDragging()
+    func didEndDragging()
     func didChangeToIndex(index: Int)
     func didScrolledWithContentOffsetX(x: CGFloat)
 
@@ -126,6 +127,15 @@ extension KAPageViewController: UIScrollViewDelegate {
 
     }
     
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        pageDelegate?.didEndDragging()
+    }
+    
+    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            pageDelegate?.didEndDragging()
+        }
+    }
 }
 
 // MARK: - UIPageViewController
