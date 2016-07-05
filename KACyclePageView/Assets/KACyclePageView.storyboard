@@ -43,13 +43,13 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYr-Eh-GlB">
-                                                            <rect key="frame" x="4" y="13" width="37" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <rect key="frame" x="6" y="14" width="33" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIU-Fq-7LD">
-                                                            <rect key="frame" x="-6" y="42" width="57" height="2"/>
+                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIU-Fq-7LD">
+                                                            <rect key="frame" x="-3" y="42" width="50" height="2"/>
                                                             <color key="backgroundColor" red="1" green="0.63921568630000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="2" id="bHd-QJ-yC9"/>
@@ -96,8 +96,8 @@
                                     <constraint firstItem="D1Z-Db-fHu" firstAttribute="centerX" secondItem="MVT-g4-qG5" secondAttribute="centerX" id="lS2-TQ-74N"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S27-Kd-Hkh">
-                                <rect key="frame" x="0.0" y="66" width="320" height="504"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S27-Kd-Hkh">
+                                <rect key="frame" x="0.0" y="66" width="320" height="502"/>
                                 <connections>
                                     <segue destination="cDd-OE-0vq" kind="embed" identifier="SeguePageView" id="I3F-AK-sHQ"/>
                                 </connections>

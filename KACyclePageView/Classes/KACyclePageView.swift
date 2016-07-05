@@ -163,12 +163,26 @@ public class KACyclePageView: UIViewController {
             
             //update bar width
             bottomBarViewWidth.constant = currentCell.titleLabelWidthWithMargin + (nextCell.titleLabelWidthWithMargin - currentCell.titleLabelWidthWithMargin) * abs(scrollRate)
-
-            if needUpdateTitleColor(contentOffsetX) {
-                nextCell.titleLabel.textColor = dataSource?.colorForCurrentTitle()
-                currentCell.titleLabel.textColor = dataSource?.colorForDefaultTitle()
+            
+            guard let currentColor = dataSource?.colorForCurrentTitle(), defaultColor = dataSource?.colorForDefaultTitle() else {
+                return
             }
+            
+            nextCell.titleLabel.textColor = colorForProgress(defaultColor, newColor: currentColor, progress: abs(scrollRate))
+            currentCell.titleLabel.textColor = colorForProgress(currentColor, newColor: defaultColor, progress: abs(scrollRate))
         }
+    }
+    
+    private func colorForProgress(oldColor: UIColor, newColor: UIColor, progress: CGFloat) -> UIColor {
+        guard let old = oldColor.coreImageColor, new = newColor.coreImageColor else {
+            return oldColor
+        }
+        
+        let newR = (1 - progress) * old.red + progress * new.red
+        let newG = (1 - progress) * old.green + progress * new.green
+        let newB = (1 - progress) * old.blue + progress * new.blue
+        
+        return UIColor(red: newR, green: newG, blue: newB, alpha: 1.0)
     }
     
     private func needUpdateTitleColor(contentOffsetX: CGFloat) -> Bool {
@@ -352,6 +366,8 @@ extension KACyclePageView: KAPageViewControllerDelegate {
 
 }
 
+// MARK: - TitleCell
+
 class TitleCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -362,3 +378,10 @@ class TitleCell: UICollectionViewCell {
     }
 }
 
+extension UIColor {
+    
+    var coreImageColor: CoreImage.CIColor? {
+        return CoreImage.CIColor(color: self)
+    }
+    
+}
