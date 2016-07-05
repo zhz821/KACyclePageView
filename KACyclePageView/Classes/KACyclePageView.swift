@@ -306,7 +306,7 @@ extension KACyclePageView: UICollectionViewDataSource, UICollectionViewDelegate,
         pageViewController.displayControllerWithIndex(newPageIndex, direction: direction, animated: true)
 
         if let visableCells = collectionView.visibleCells() as? [TitleCell] {
-            visableCells.map {
+            let _ = visableCells.map {
                 $0.titleLabel.textColor = dataSource?.colorForDefaultTitle()
             }
         }
