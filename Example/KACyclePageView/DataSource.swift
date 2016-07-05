@@ -11,6 +11,11 @@ import KACyclePageView
 
 let titles = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
+private struct UX {
+    static let currentTitleColor = UIColor.orangeColor()
+    static let defaultTitleColor = UIColor.blackColor()
+}
+
 class DataSource: NSObject {
 
 }
@@ -22,8 +27,9 @@ extension DataSource: KACyclePageViewDataSource {
     }
     
     func viewControllerForPageAtIndex(index: Int) -> UIViewController {
-        let vc = ViewController()
+        let vc = createViewControllerWithIdentifier(nil, storyboardName: "Main") as! ViewController
         vc.view.backgroundColor = UIColor.randomColor()
+        vc.contentLabel.text = titles[index]
         return vc
     }
     
@@ -31,6 +37,24 @@ extension DataSource: KACyclePageViewDataSource {
         return titles[index]
     }
     
+    
+    func colorForCurrentTitle() -> UIColor {
+        return UX.currentTitleColor
+    }
+    
+    func colorForDefaultTitle() -> UIColor {
+        return UX.defaultTitleColor
+    }
+    
+}
+
+func createViewControllerWithIdentifier(id: String?, storyboardName: String) -> UIViewController {
+    let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+    if let id = id {
+        return storyboard.instantiateViewControllerWithIdentifier(id)
+    }
+    
+    return storyboard.instantiateInitialViewController()!
 }
 
 extension UIColor {

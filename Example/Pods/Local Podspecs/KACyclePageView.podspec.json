@@ -1,9 +1,9 @@
 {
   "name": "KACyclePageView",
-  "version": "0.1.0",
-  "summary": "A short description of KACyclePageView.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/KACyclePageView",
+  "version": "0.1.3",
+  "summary": "Cycled UIPageViewController with an UICollectionView header.",
+  "description": "Cycled UIPageViewController with an UICollectionView header written in Swift.",
+  "homepage": "https://github.com/zhz821/KACyclePageView",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "zhihuazhang": "zhangzhihua.dev@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/KACyclePageView.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/zhz821/KACyclePageView.git",
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "8.0"

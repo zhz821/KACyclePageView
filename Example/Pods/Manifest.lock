@@ -1,5 +1,5 @@
 PODS:
-  - KACyclePageView (0.1.0)
+  - KACyclePageView (0.1.3)
 
 DEPENDENCIES:
   - KACyclePageView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  KACyclePageView: 46291cdc761db734677bf0ef81c3098af3f6a46a
+  KACyclePageView: 84b838d8445548bce43a2319458ecbdca5ea2539
 
 PODFILE CHECKSUM: db0244976185473114e29a3a7e3b8d83ac083bfd
 
